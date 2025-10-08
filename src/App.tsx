@@ -30,7 +30,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div className="w-full max-w-md mx-auto">
-        <h1 className="text-3xl font-bold text-teal-600 mb-6 text-center">📝 React Notes App</h1>
+        <h1 className="lg:text-3xl text-lg font-bold text-teal-600 mb-6 text-center">📝 React Notes App</h1>
 
         <div className="bg-white p-6 rounded-2xl shadow-md border border-teal-100">
           <textarea
@@ -47,7 +47,7 @@ export default function App() {
             Add Note
           </button>
 
-          <div className="mt-5 space-y-3">
+          <div className="mt-5 space-y-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-teal">
             {notes.length === 0 ? (
               <p className="text-gray-500 text-center">No notes yet!</p>
             ) : (
