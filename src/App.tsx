@@ -30,11 +30,11 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div className="w-full max-w-md mx-auto">
-        <h1 className="text-3xl font-bold text-blue-600 mb-6 text-center">📝 React Notes App</h1>
+        <h1 className="text-3xl font-bold text-teal-600 mb-6 text-center">📝 React Notes App</h1>
 
-        <div className="bg-white p-6 rounded-2xl shadow-md">
+        <div className="bg-white p-6 rounded-2xl shadow-md border border-teal-100">
           <textarea
-            className="w-full border border-gray-300 text-black rounded-md p-3 mb-3 outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full border border-gray-300 text-black rounded-md p-3 mb-3 outline-none focus:ring-2 focus:ring-teal-400"
             rows={4}
             placeholder="Write your note..."
             value={note}
@@ -42,7 +42,7 @@ export default function App() {
           />
           <button
             onClick={addNote}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md transition"
+            className="w-full bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-600 hover:to-emerald-700 text-white py-2 rounded-md transition shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-300"
           >
             Add Note
           </button>
@@ -54,12 +54,12 @@ export default function App() {
               notes.map((n: string, i: number) => (
                 <div
                   key={i}
-                  className="flex justify-between items-center bg-gray-50 p-3 rounded-lg shadow-sm"
+                  className="flex justify-between items-center bg-gray-50 p-3 rounded-lg shadow-sm border border-teal-100"
                 >
                   <p className="text-gray-800 break-all">{n}</p>
                   <button
                     onClick={() => deleteNote(i)}
-                    className="text-red-500 hover:text-red-600"
+                    className="ml-2 inline-flex items-center justify-center h-8 w-8 rounded-md border border-rose-200 bg-rose-50 text-rose-600 hover:text-rose-700 hover:bg-rose-100 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300"
                   >
                     ❌
                   </button>
